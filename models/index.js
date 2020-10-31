@@ -1,4 +1,5 @@
 const User = require("./User");
+const Post = require('./Post')
 // const Post = require("./Post");
 // const Vote = require('./Vote');
 // const Comment = require('./Comment');
@@ -57,4 +58,7 @@ const User = require("./User");
 // });
 
  
-module.exports = { User };
+module.exports = { 
+    User,
+    Post
+ };
