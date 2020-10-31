@@ -129,18 +129,23 @@ router.put('/:id', (req, res) => {
   });
 
 
-router.delete('/:id', (req, res) => {
-  Post.findOne({
-    where: {id: req.params.id},
-    include: [Comment]
-  })
-  .then(post => {
-    post.comments.forEach(comment => {
-      comment.destroy();
+  router.delete('/:id', (req, res) => {
+    Post.destroy({
+      where: {
+        id: req.params.id
+      }
     })
-    post.destroy();
-    res.end();
-  })
-})
+      .then(dbUserData => {
+        if (!dbUserData) {
+          res.status(404).json({ message: 'No user found with this id' });
+          return;
+        }
+        res.json(dbUserData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
   module.exports = router;
