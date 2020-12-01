@@ -4,13 +4,14 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg "License Badge")
 
-A responsive full stack, secure web application. After creating a profile, a logged in user can create, edit, and comment on their blog posts, and other users blog posts. If a user is not logged in, they will be directed to log in. At the log in page, there is an option to create a profile.  
+A responsive full stack web application that uses the power of a SQL database to store and retrieve users post and comments. After creating a profile, a logged in user can create, edit, and comment on their blog posts, and other users blog posts. If a user is not logged in, they will be directed to log in. At the log in page, there is an option to create a profile. Optionally, any user can visit the public dahsboards of posts. However, only logged-in users may comment on other posts.  
 
 
 # Table of Contents 
 
 - [Deployment and Repository](#deployment/repository)
 - [Usage](#usage)
+- [Examples](#examples)
 - [User Story](#userstory)
 - [Acceptance Criteria](#AcceptanceCriteria)
 - [Contributions](#contributing)
@@ -30,13 +31,25 @@ A responsive full stack, secure web application. After creating a profile, a log
 
 The next virulal blog posting site! As previously stated, this application is designed for people to create content, and connect with other content creaters to enable collaboration, or share information. 
 
-## UserStory: 
+## Examples
+Log In Page
+![login](/public/images/login.jpg)
+
+Dashboard for not logged-in users:
+![dashboard](/public/images/dashboard.jpg)
+
+Single Post View:
+![single post](/public/images/single-post.jpg)
+
+Create a new post:
+![new post](/public/images/new-post.jpg)
+## User Story: 
 
 * AS A developer who writes about tech 
 * I WANT a CMS-style blog site
 * SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
-## AcceptanceCriteria: 
+## Acceptance Criteria: 
 
 * GIVEN a CMS-style blog site
 * WHEN I visit the site for the first time
